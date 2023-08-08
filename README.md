@@ -1,7 +1,7 @@
-#Database Name: *LibraryDB*
-##1. Tables & Relationships:
+# Database Name: *LibraryDB*
+## 1. Tables & Relationships:
 
-###Authors Table:
+### Authors Table:
 - author_id (Primary Key)
 - name
 - birth_date
@@ -11,15 +11,15 @@
 - title
 - publication_year
 
-###Genres Table:
+### Genres Table:
 - genre_id (Primary Key)
 - genre_name
 
-###Author_Book Table (to manage many-to-many relationship between authors and books):
+### Author_Book Table (to manage many-to-many relationship between authors and books):
 - author_id (Foreign Key)
 - book_id (Foreign Key)
 
-###Book_Genre Table (to manage many-to-many relationship between books and genres):
+### Book_Genre Table (to manage many-to-many relationship between books and genres):
 book_id (Foreign Key)
 genre_id (Foreign Key)
 
