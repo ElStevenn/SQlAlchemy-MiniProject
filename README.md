@@ -33,9 +33,9 @@ genre_id (Foreign Key)
 
 ### *Historical Books:* Books that were published more than 50 years ago can be flagged as historical in the system, creating a subset of the library collection for history enthusiasts.
 
-###*Author Birth Year Filter*: Allows users to filter books based on the birth year of the authors.
+### *Author Birth Year Filter*: Allows users to filter books based on the birth year of the authors.
 
-##Functionalities:
+## Functionalities:
 - *Add/Remove/Update Books and Authors*: Maintain an up-to-date catalog.
 
  - *Search Function*: Allow users to search for books by title, author, or genre.
