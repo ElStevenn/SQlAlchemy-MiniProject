@@ -1,11 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime, CheckConstraint, Date, Table
 from sqlalchemy.ext.declarative import declarative_base
-
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
-from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.orm import relationship
+import uuid
 
 import os
 cls = lambda: os.system('cls')
@@ -41,7 +37,7 @@ class Authors(Base, HashGen):
     """Author table"""
     __tablename__ = "Authors"
 
-    Author_id = Column(String, primary_key=True, default=HashGen.generate_random_hash())
+    Author_id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     Name = Column(String, nullable=False)
     Birth_date = Column(Date, nullable=False)
 
@@ -51,7 +47,7 @@ class Books(Base, HashGen):
     """Books table"""
     __tablename__ = "Books"
 
-    Books_ID = Column(String, primary_key=True, default=HashGen.generate_random_hash())
+    Books_ID = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     Title = Column(String, nullable=False)
     Publication_Date = Column(Date, nullable=False)
 
@@ -60,7 +56,7 @@ class Generes(Base, HashGen):
     """Generes Table"""
     __tablename__ = "Generes"
 
-    Genere_ID = Column(String, primary_key=True, default=HashGen.generate_random_hash())
+    Genere_ID = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     Genere_Name = Column(String, nullable=False)
 
 
